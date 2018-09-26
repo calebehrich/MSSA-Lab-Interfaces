@@ -39,10 +39,21 @@ namespace Drawing
             canvas.Children.Add(this.rect);
         }
 
+        void IColor.SetColor(Color color)
+        {
+            if(this.rect != null)
+            {
+                SolidColorBrush brush = new SolidColorBrush(color);
+                this.rect.Fill = brush;
+            }
+        }
+
         void IDraw.SetLocation(int xCoord, int yCoord)
         {
             this.locX = xCoord;
             this.locY = yCoord;
         }
+
+
     }
 }
