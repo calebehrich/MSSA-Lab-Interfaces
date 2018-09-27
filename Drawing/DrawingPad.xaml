@@ -10,14 +10,15 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid Margin="12,0,12,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="15*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="81*"/>
+                <RowDefinition Height="69*"/>
+                <RowDefinition Height="10*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Drawing Pad" FontSize="48" FontFamily="Segoe UI Light"/>
-            <Canvas x:Name="drawingCanvas" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Drawing Pad" FontSize="48" FontFamily="Segoe UI Light" Margin="0,21"/>
+            <Canvas x:Name="drawingCanvas" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.RowSpan="2" Width="1476" Tapped="drawingCanvas_Tapped" RightTapped="drawingCanvas_RightTapped">
                 <Canvas.Background>
                     <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                         <GradientStop Color="RoyalBlue" Offset="0" />
